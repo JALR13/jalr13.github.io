@@ -2,6 +2,8 @@ body{
 	background-color: rgb(190,190,190);
 	font-family: "Arial";
 	font-size: 12px;
+	padding: 0;
+	margin: 5px;
 }
 header{
 	background-color: white;
@@ -38,28 +40,52 @@ nav a:not(:last-child){
 nav a:hover{
 	background-color: rgb(190,190,190);
 }
-main{
+
+/*main{
+	border: 1px solid black;
+	padding-left: 302px;
+	padding-right: 302px;
+}
+main:has(#left){
+	padding-left: 0;
+}
+main:has(#right){
+	padding-right: 0;
+}
+main:has(#left#right){
+	
+}*/
+#left:empty{
+	visibility: hidden;
+}
+#right:empty{
+	visibility: hidden;
+}
+
+#content{
 	background-color: white;
 	border: 1px black solid;
-	/*width: min(calc(100% - 2px), 1420px);*/
-	margin-left: auto;
-	margin-right: auto;
-	height: calc(100vh - 74px - 20px - 20px - 12px);
+	width: calc(100% - 2px - 634px);
+	margin-left: 5px;
+	margin-right: 5px;
+	height: calc(100vh - 70px - 20px - 20px - 10px);
 	overflow-y: scroll;
 	padding: 10px;
 }
-main #left, #right{
-	width: 300px;
-	height: calc(100% - 2px);
+#left, #right{
+	width: 280px;
+	height: calc(100vh - 70px - 20px - 20px - 10px);
 	border: 1px black solid;
+	padding: 10px;
+	background-color: white;
 }
-main #left{
+#left{
 	float: left;
-	margin-right: 10px;
+	margin-right: 5px;
 }
-main #right{
+#right{
 	float: right;
-	margin-left: 10px;
+	margin-left: 5px;
 }
 footer{
 	background-color: white;
