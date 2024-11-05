@@ -6,17 +6,19 @@
 	<title>JALR13 | Home</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" type="image/x-icon" href="img/icon.ico">
+	<script src="jquery-3.7.1.min.js"></script>
+	<script>
+		$(function(){
+			$('#header_nav').load(nav.html);
+		});
+	</script>
 </head>
 
 <body>
 	<header>
 		<img src="img/jalr13.png">
 		<span id="page_title">JALR13</span>
-		<nav>
-			<a href="world/world.html">D&D World</a>
-			<a href="">Link 2</a>
-			<a href="">Link 3</a>
-		</nav>
+		<nav id="header_nav"></nav>
 	</header>
 	
 	<main>
@@ -63,7 +65,7 @@
 	
 	<footer>
 		<nav>
-			<a href="index.html">Home</a>
+			<a href="/index.html">Home</a>
 			<a href="">Top</a>
 		</nav>
 	</footer>
