@@ -15,17 +15,25 @@ header{
 header img{
 	height: 100%;
 	float: left;
+	margin-right: 10px;
 }
 #page_title{
 	font-size: 32px;
-	margin-left: 10px;
 	font-weight: bold;
 	font-family: "Arial";
+	margin-left: 10px;
 }
-nav{
-	font-size: 0px;
+
+footer{
+	background-color: white;
+	border: 1px black solid;
+	text-align: center;
+	height: 18px;
+	margin-top: 5px;
 }
-nav a{
+
+header nav{	font-size: 0px; }
+header nav a{
 	font-family: "Times New Roman";
 	font-size: 16px;
 	color: black;
@@ -33,33 +41,82 @@ nav a{
 	width: 150px;
 	display: inline-block;
 	text-align: center;
+	border-left: 1px black solid;
 }
-nav a:not(:last-child){
-	border-right: 1px black solid;
+header nav a:last-child{ border-right: 1px black solid; }
+header nav a:hover{ background-color: rgb(190,190,190); }
+footer nav{	font-size: 0px; }
+footer nav a{
+	font-family: "Times New Roman";
+	font-size: 16px;
+	color: black;
+	text-decoration: none;
+	width: 150px;
+	display: inline-block;
+	text-align: center;
+	border-left: 1px black solid;
 }
-nav a:hover{
-	background-color: rgb(190,190,190);
+footer nav a:last-child{ border-right: 1px black solid; }
+footer nav a:hover{ background-color: rgb(190,190,190); }
+
+
+#left:empty{ visibility: hidden; }
+#right:empty{ visibility: hidden; }
+#left, #right{
+	width: 280px;
+	height: calc(100vh - 70px - 20px - 20px - 10px);
+	border: 1px black solid;
+	padding: 10px;
+	background-color: white;
+	overflow-y: scroll;
+}
+#left{
+	float: left;
+	margin-right: 5px;
+}
+#right{
+	float: right;
+	margin-left: 5px;
 }
 
-/*main{
-	border: 1px solid black;
-	padding-left: 302px;
-	padding-right: 302px;
+#left_nav{
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Arial";
+	text-align: center;
+	display: block;
 }
-main:has(#left){
-	padding-left: 0;
+#left_nav + ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-weight: bold;
 }
-main:has(#right){
-	padding-right: 0;
+#left_nav + ul ul{
+	list-style: disc;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
 }
-main:has(#left#right){
-	
-}*/
-#left:empty{
-	visibility: hidden;
+#left_nav + ul ul ul{
+	list-style: disc;
+	font-size: 12px;
+	font-weight: normal;
 }
-#right:empty{
-	visibility: hidden;
+#left_nav + ul a{
+	color: black;
+	text-decoration: none;
+}
+#left_nav + ul a:hover{	color: blue; }
+
+#right_info{
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Arial";
+	text-align: center;
+	display: block;
 }
 
 #content{
@@ -71,28 +128,6 @@ main:has(#left#right){
 	height: calc(100vh - 70px - 20px - 20px - 10px);
 	overflow-y: scroll;
 	padding: 10px;
-}
-#left, #right{
-	width: 280px;
-	height: calc(100vh - 70px - 20px - 20px - 10px);
-	border: 1px black solid;
-	padding: 10px;
-	background-color: white;
-}
-#left{
-	float: left;
-	margin-right: 5px;
-}
-#right{
-	float: right;
-	margin-left: 5px;
-}
-footer{
-	background-color: white;
-	border: 1px black solid;
-	text-align: center;
-	height: 18px;
-	margin-top: 5px;
 }
 
 p{
